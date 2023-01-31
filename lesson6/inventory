@@ -1,7 +1,7 @@
 [server]
 ansible1
 
-[lamp_prod]
+[DB]
 ansible2
 
 [prod:children]
