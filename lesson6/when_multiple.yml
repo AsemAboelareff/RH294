@@ -7,4 +7,5 @@
       state: installed
     when: 
       - ansible_distribution == "RedHat"
-      - ansible_memfree_mb > 1512 
+      - ansible_memfree_mb > 512 
+#when ansible_distribution == "RedHat" and ansible_memfree_mb > 512 

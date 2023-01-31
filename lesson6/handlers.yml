@@ -1,6 +1,7 @@
 ---
 - name: set up web server
   hosts: all
+#  force_handlers: True
   tasks:
     - name: install httpd
       yum: 
@@ -21,3 +22,4 @@
       service:
         name: httpd
         state: restarted
+#1#echo "welcome" > /tmp/index.html
