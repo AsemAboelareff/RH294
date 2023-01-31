@@ -2,6 +2,7 @@
   hosts: all
   tasks:
     - name: setting up http
+#block act as a super task    
       block:
       - name: installing http
         yum:

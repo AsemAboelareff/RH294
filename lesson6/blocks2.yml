@@ -15,3 +15,4 @@
           shell:
             cmd: /usr/bin/logger hello
 
+#2#ansible ansible2 -m file -a 'path=/var/www/html/index.html state=touch'

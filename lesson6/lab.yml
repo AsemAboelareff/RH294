@@ -12,7 +12,7 @@
         name: "{{ item }}"
         state: present
       loop: "{{ database_packages }}"
-      when: ( ansible_distribution == "RedHat" or ansible_distribution == "CentOS" ) and ansible_distribution_major_version == "8"
+      when: ( ansible_distribution == "RedHat" and ansible_distribution_major_version == "9") or (ansible_distribution == "Amazon" and ansible_distribution_major_version == "2" )
     - name: start the db service
       service: 
         name: mariadb
