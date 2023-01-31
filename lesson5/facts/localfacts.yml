@@ -1,6 +1,6 @@
 ---
 - name: install custom facts
-  hosts: lamp
+  hosts: server
   vars:
     remote_dir: /etc/ansible/facts.d
     facts_file: localfacts.fact
@@ -16,12 +16,12 @@
         dest: "{{ remote_dir }}"
 
 - name: install and start
-  hosts: lamp
+  hosts: server
   tasks:
     - name: install 
       yum:
-        name: "{{ ansible_local.localfacts.localfacts.package }}"
+        name: "{{ ansible_local.localfacts.customfacts.package }}"
     - name: start 
       service:
-        name: "{{ ansible_local.localfacts.localfacts.service }}"
+        name: "{{ ansible_local.localfacts.customfacts.service }}"
         state: started
