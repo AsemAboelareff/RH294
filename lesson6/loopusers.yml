@@ -8,10 +8,10 @@
       state: present
       groups: "{{ item.groups }}"
     loop:
-      - name: anna
+      - name: joe
         groups: wheel
-      - name: linda
+      - name: sara
         groups: users
-      - name: bob
+      - name: mohamed
         groups: users
 
