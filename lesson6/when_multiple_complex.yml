@@ -9,5 +9,5 @@
       ( ansible_distribution == "RedHat" and
         ansible_memfree_mb > 512 ) 
       or
-      ( ansible_distribution == "CentOS" and
+      ( ansible_distribution == "Amazon" and
         ansible_memfree_mb > 1024 )

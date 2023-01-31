@@ -3,9 +3,9 @@
   hosts: all
   vars:
     supported_distros:
-      - Ubuntu
+      - Redhat
       - CentOS
-      - Fedora
+      - Amazon
   tasks:
     - name: install RH family specific packages
       yum:

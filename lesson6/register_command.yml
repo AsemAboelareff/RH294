@@ -5,5 +5,5 @@
     - shell: cat /etc/passwd
       register: passwd_contents
     - debug: 
-        msg: echo "passwd contains user lisa"
-      when: passwd_contents.stdout.find('lisa') != -1
+        msg: echo "passwd contains user fahd"
+      when: passwd_contents.stdout.find('fahd') != -1
