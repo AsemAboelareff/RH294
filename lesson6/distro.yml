@@ -5,7 +5,8 @@
     supported_distros:
       - Redhat
       - CentOS
-      - Amazon
+      - Fedora
+ #if you have Amazon distribution task will be skipped 
   tasks:
     - name: install RH family specific packages
       yum:

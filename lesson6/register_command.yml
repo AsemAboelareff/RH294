@@ -7,4 +7,5 @@
     - debug: 
         msg: echo "passwd contains user rg"
       when: passwd_contents.stdout.find('rg') != -1
+#create user rg on ansible1 to check how debug module will skip ansible2
 #ansible -m user -a "name=rg" ansible1
