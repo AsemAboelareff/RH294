@@ -1,5 +1,6 @@
 ---
 - name: install custom facts
+  become: true
   hosts: server
   vars:
     remote_dir: /etc/ansible/facts.d
@@ -16,6 +17,7 @@
         dest: "{{ remote_dir }}"
 
 - name: install and start
+  become: true
   hosts: server
   tasks:
     - name: install 
