@@ -1,5 +1,5 @@
 ---
-- name: create users using a loop testremote
+- name: create users using a loop test remote
   hosts: all
   tasks: 
   - name: create users 
