@@ -1,18 +1,29 @@
 ---
 - name: database server is running
-  hosts: lamp_prod
+  hosts: all
   vars:
-    database_packages:
+    RH_database_packages:
       - mariadb-server
       - python3-PyMySQL
+    AMZ_database_packages:
+      - mariadb-server
+      - mysql-devel
 
   tasks: 
-    - name: mariadb packages are installed
+    - name: mariadb packages are installed for RedHat
       yum:
         name: "{{ item }}"
         state: present
-      loop: "{{ database_packages }}"
-      when: ( ansible_distribution == "RedHat" and ansible_distribution_major_version == "9") or (ansible_distribution == "Amazon" and ansible_distribution_major_version == "2" )
+      loop: "{{ RH_database_packages }}"
+      when: ansible_distribution == "RedHat" and ansible_distribution_major_version == "9"
+    
+    - name: mariadb packages are installed for Amazon linux
+      yum:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ AMZ_database_packages }}"
+      when: ansible_distribution == "Amazon" and ansible_distribution_major_version == "2"
+
     - name: start the db service
       service: 
         name: mariadb
