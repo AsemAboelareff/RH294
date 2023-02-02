@@ -1,0 +1,10 @@
+---
+users:
+  - username: linda
+    groups: developers
+  - username: lori
+    groups: developers
+  - username: lisa
+    groups: admins
+  - username: lucy
+    groups: admins

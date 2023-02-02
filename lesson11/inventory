@@ -1,0 +1,11 @@
+[server]
+ansible1
+
+[DB]
+ansible2
+
+[prod:children]
+server
+DB
+
+

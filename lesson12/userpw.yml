@@ -1,0 +1,11 @@
+---
+- name: create user with encrypted pass
+  hosts: ansible2
+  vars:
+    pass: "mypassword"
+  tasks:
+  - name: create the user
+    user: 
+      name: anna
+      password:  "{{pass | password_hash('sha512')}}"
+

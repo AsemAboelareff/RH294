@@ -1,0 +1,8 @@
+sudo_groups:
+  - name: developers
+    groupid: 5000
+    sudo: false
+  - name: admins
+    groupid: 5001
+    sudo: true
+
