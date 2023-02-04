@@ -7,7 +7,7 @@ partitions:
 
 vgs:
   - name: vgweb
-    devices: /dev/sdb1
+    devices: /dev/xvdb
 
 lvs:
   - name: lvwebdocs
