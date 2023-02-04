@@ -9,7 +9,7 @@
         state: present
     - name: verify partition existence
       parted:
-        device: /dev/sda
+        device: /dev/xvdb
         state: present
         number: "{{ item.number }}"
         part_start: "{{ item.start }}"
