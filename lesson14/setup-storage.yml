@@ -4,6 +4,9 @@
   vars_files:
     - vars/storage.yml
   tasks:
+    - yum:
+      name: 'lvm*'
+      state: present
     - name: verify partition existence
       parted:
         device: /dev/sda
