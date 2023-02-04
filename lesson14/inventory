@@ -1,16 +1,11 @@
-control.example.com
-ansible1.example.com
-ansible2.example.com
-ansible4.example.com
+[server]
+ansible1
 
-[lamp]
-ansible4.example.com
+[DB]
+ansible2
 
-[file]
-ansible2.example.com
-
-[nodes:children]
-lamp
-file
+[prod:children]
+server
+DB
 
 
