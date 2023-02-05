@@ -1,6 +1,6 @@
 ---
 - name: NIC configuration
-  hosts: ansible2.example.com
+  hosts: ansible2
   tasks:
   - include_vars:
       file: networkvars.yml

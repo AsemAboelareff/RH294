@@ -1,0 +1,11 @@
+[server]
+ansible1 
+
+[DB]
+ansible2 ansible_host=54.234.59.247
+
+[prod:children]
+server
+DB
+
+
