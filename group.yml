@@ -3,6 +3,6 @@
   become: yes
   tasks:
     - name: create new group
-      user:
+      group:
         name: "{{ group_name }}"
         state: present
