@@ -1,6 +1,6 @@
 ---
 - name: enable webserver
-  hosts: ansible1.example.com
+  hosts: ansible-1
   tasks:
     - name: install httpd and firewalld
       yum:
