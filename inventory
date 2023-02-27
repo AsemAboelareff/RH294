@@ -1,8 +1,8 @@
 [server]
-ansible1 ansible_host=3.85.141.109
+ansible1 ansible_host=172.31.60.195
 
 [DB]
-ansible2 ansible_host=54.234.59.247
+controller ansible_host=172.31.62.223
 
 [prod:children]
 server
